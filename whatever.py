@@ -1,0 +1,1 @@
+print("Claude3AI: " + "this is a simple test for docker!")

@@ -5,11 +5,11 @@ from openai import OpenAI
 import anthropic
 
 
-clientClaude = anthropic.Client(api_key="<YOUR CLAUDE3 API TOKEN>")
+clientClaude = anthropic.Client(api_key="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")
 
 clientOpenAI = OpenAI(
         # This is the default and can be omitted
-        api_key="<YOUR OPENAI API TOKEN>",
+        api_key="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",
 )
 
 def _claude3Move(message):
@@ -57,9 +57,10 @@ def _openAIMove(message):
 
 
 msg = "Hello there! Let's play tic-tac-toe. I go first with X at position 5. Now you go and response in json."
-firstMove = _openAIMove(msg)
-print("OpenAI: " + firstMove)
+#firstMove = _openAIMove(msg)
+firstMove = _claude3Move(msg)
+print("OpenAI: " + str(firstMove[0]))
 
-secondMove = "My move is this: " + firstMove + " Now your move next and return in json."
+secondMove = "My move is this: " + str(firstMove[0]) + " Now your move next and return in json."
 secondMove = _claude3Move(secondMove) 
 print("Claude3AI: " + str(secondMove[0]))
