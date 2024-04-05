@@ -9,9 +9,9 @@ clientClaude = anthropic.Client(api_key="sk-ant-api03-DcSFwaGZ0kjTX9BBmidecPzx3c
 
 clientOpenAI = OpenAI(
         # This is the default and can be omitted
-        api_key="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",
+        api_key="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",
 )
-
+=
 def _claude3Move(message):
         
     response = clientClaude.messages.create(
@@ -57,10 +57,10 @@ def _openAIMove(message):
 
 
 msg = "Hello there! Let's play tic-tac-toe. I go first with X at position 5. Now you go and response in json."
-#firstMove = _openAIMove(msg)
-firstMove = _claude3Move(msg)
-print("OpenAI: " + str(firstMove[0]))
+firstMove = _openAIMove(msg)
+#firstMove = _claude3Move(msg)
+print("OpenAI: " + firstMove)
 
-secondMove = "My move is this: " + str(firstMove[0]) + " Now your move next and return in json."
+secondMove = "My move is this: " + firstMove + " Now your move next and return in json."
 secondMove = _claude3Move(secondMove) 
 print("Claude3AI: " + str(secondMove[0]))
