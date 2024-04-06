@@ -62,10 +62,10 @@ def ai_move(board, player):
         ]
         )
         
-        print(response)
+        #print(response)
         #return [2,1]
         move = json.loads(response.choices[0].message.content.strip())
-        print(move)
+        #print(move)
         row = move['row'] -1
         if 'column' in move:
             col = move['column'] -1

@@ -5,11 +5,11 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy the Python script into the container at /app
-COPY tictactoe-c2c.py /app
+COPY * /app
 
 # Install any needed dependencies specified in requirements.txt
 RUN pip install openai
-RUN pip install anthropic
+RUN pip install google-generativeai
 
 # Run the Python script when the container launches
-CMD ["python", "tictactoe-c2c.py"]
+CMD ["python", "tic-tac-toe-ais.py"]
