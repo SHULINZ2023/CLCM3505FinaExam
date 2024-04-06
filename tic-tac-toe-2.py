@@ -11,7 +11,7 @@ clientOpenAI = OpenAI(
         # This is the default and can be omitted
         api_key="",
 )
-=
+
 def _claude3Move(message):
         
     response = clientClaude.messages.create(
