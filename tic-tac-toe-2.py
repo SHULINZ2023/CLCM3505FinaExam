@@ -5,11 +5,11 @@ from openai import OpenAI
 import anthropic
 
 
-clientClaude = anthropic.Client(api_key="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")
+clientClaude = anthropic.Client(api_key="")
 
 clientOpenAI = OpenAI(
         # This is the default and can be omitted
-        api_key="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",
+        api_key="",
 )
 =
 def _claude3Move(message):

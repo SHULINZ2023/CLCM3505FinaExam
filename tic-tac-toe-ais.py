@@ -9,9 +9,9 @@ import google.generativeai as genai
 # Set up your OpenAI API key
 clientOpenAI = OpenAI(
         # This is the default and can be omitted
-        api_key="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",
+        api_key="",
 )
-genai.configure(api_key="AIzaSyCFRg-6LRLgd2GkOwFm_mBJNXZ_B9lSJ4A")
+genai.configure(api_key="")
 
 # Set up the model
 generation_config = {

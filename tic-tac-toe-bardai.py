@@ -9,7 +9,7 @@ import google.generativeai as genai
 # Replace with your Bard API token
 
 
-genai.configure(api_key="AIzaSyCFRg-6LRLgd2GkOwFm_mBJNXZ_B9lSJ4A")
+genai.configure(api_key="")
 
 # Set up the model
 generation_config = {

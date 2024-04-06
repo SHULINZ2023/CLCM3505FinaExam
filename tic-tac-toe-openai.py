@@ -7,7 +7,7 @@ import random
 # Set up your OpenAI API key
 clientOpenAI = OpenAI(
         # This is the default and can be omitted
-        api_key="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",
+        api_key="",
 )
 
 
